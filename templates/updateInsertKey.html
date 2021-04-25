@@ -1,0 +1,19 @@
+<doctype html>
+    <head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+    <div style = "padding-top: 100px; text-align: center;">
+    <form method="post" action="/update">
+        <h2>Updating <b value = {{value[0]}}>{{value[0]}}</b></h2>
+        <h3>Type in the Primary key(s) for the record you want to update</h3>
+        {% for field in value[1:2] %}
+        <p> <b value = {{field[0]}}>{{field[0]}}</b> <input name="inputtext" type="text"><br> </p>
+        {%endfor%}
+        <h3>Type a new value and click on the field to be updated</h3>
+        <p>
+            <input name="inputtext" type="text"><br><br>
+        {% for field in value[2:] %}
+        <input type="submit" name="submit_button" value= {{field[0]}}>
+        {%endfor%}
+    </p>
+    </form>
+    </div>
+</doctype>

@@ -1,0 +1,26 @@
+<doctype html>
+    <head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+    <div style = "padding-top: 100px; text-align: center;">
+    <form action="/">
+        <table style = "padding-left: auto;">
+            <tr> 
+                {% for field in value[0] %}
+                
+                <th><b>{{field}}</b></th>
+                {%endfor%}
+            </tr>
+        {% for each in value[1:] %}
+        <tr> 
+        {% for field in each %}
+        
+            <th>{{field}}</th>
+            {%endfor%}
+        </tr>
+        
+        {%endfor%}
+    </table>
+    <br>
+        <p><input type="submit" name="submit_button" value="Return to Home Page"></p>
+    </form>
+    </div>
+</doctype>
