@@ -1,24 +1,27 @@
 <doctype html>
-    <head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
     <title>Database Project</title>
-    <div style = "padding-top: 100px; text-align: center;">
-    <h2>Select one of the operations</h2>
+    <div style="padding-top: 100px; text-align: center;">
+        <h2>Select one of the operations</h2>
 
-    <p>
-        {% with messages = get_flashed_messages() %} {% if messages %}
-        <ul class=flashes>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %} {% endwith %}
-    </p>
+        <p>
+            {% with messages = get_flashed_messages() %} {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %} {% endwith %}
+        </p>
 
-    <form method="post" action="/operation">
-        <input type="submit" name="submit_button" value="Select">
-        <input type="submit" name="submit_button" value="Update">
-        <input type="submit" name="submit_button" value="Insert">
-        <input type="submit" name="submit_button" value="Delete">
-    </form>
-</div>
+        <form method="post" action="/operation">
+            <input type="submit" name="submit_button" class="btn btn-default btn-outline-primary" value="Select">
+            <input type="submit" name="submit_button" class="btn btn-default btn-outline-primary" value="Update">
+            <input type="submit" name="submit_button" class="btn btn-default btn-outline-primary" value="Insert">
+            <input type="submit" name="submit_button" class="btn btn-default btn-outline-primary" value="Delete">
+        </form>
+    </div>
 </doctype>

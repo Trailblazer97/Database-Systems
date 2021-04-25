@@ -1,15 +1,18 @@
 <doctype html>
-    <head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
-    <div style = "padding-top: 100px; text-align: center;">
-    <form method="post" action="/selectStudent">
-        <p>Select the filter type and the value you want to filter by :-</p>
-    <label><input type="radio" id="none" name="student" value="none">No Filter</label><br>
-    <label><input type="radio" id="course" name="student" value="course">Course</label><br>
-    <label><input type="radio" id="section" name="student" value="section">Section</label><br>
-   <br>
-    <input name="inputtext" type="text">
-    <br><br>
-    <input type="submit" name="submit_button" value="Show Data">
-    </form>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <div style="padding-top: 100px; text-align: center;">
+        <form method="post" action="/selectStudent">
+            <p>Select the filter type and the value you want to filter by :-</p>
+            <label><input type="radio" id="none" name="student" value="none">No Filter</label><br>
+            <label><input type="radio" id="course" name="student" value="course">Course</label><br>
+            <label><input type="radio" id="section" name="student" value="section">Section</label><br>
+            <br>
+            <input name="inputtext" type="text">
+            <br><br>
+            <input type="submit" name="submit_button" class="btn btn-default btn-outline-primary" value="Show Data">
+        </form>
     </div>
 </doctype>
